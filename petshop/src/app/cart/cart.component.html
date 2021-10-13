@@ -1,21 +1,24 @@
-<h3>Cart</h3>
+<div class="text-center"><h3 class="bg-secondary mt-2">Cart</h3>
+  <hr>
 <div class="cart-item" *ngFor ="let item of items">
  <span>{{ item.name }} </span>
  <span> {{ item.price | currency }}</span >
 </div>
-
+<hr>
 <form [formGroup]="checkoutForm"  (ngSubmit)="onSubmit(checkoutForm.value)">
-<div>
+<div class="my-1">
    <label for="name" >
      Name
    </label>
    <input id="name"  type="text" formControlName= "name">
  </div>
- <div>
+ <div class="my-1">
    <label for="address" >
      Address
    </label>
       <input id="address"  type="text" formControlName= "address">
 </div>
-<button class="button"  type="submit">Purchase</button>
+<hr>
+<button class="button rounded my-2"  type="submit">Ship that sh*t</button>
 </form>
+</div>
