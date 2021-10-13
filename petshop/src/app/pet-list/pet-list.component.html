@@ -1,1 +1,13 @@
-<p>pet-list works!</p>
+<div class="text-center"><h2 class="bg-secondary m-2">Pets</h2>
+
+<div *ngFor="let pet of products; index as id">
+ <h3>
+    <a routerLink="products/{{id}}" >
+     {{ pet.name }}
+    </a>
+ </h3>
+ <p *ngIf="pet.description ">
+     {{ pet.description }}
+   </p>
+</div></div>
+

@@ -1,1 +1,13 @@
-<p>pet-details works!</p>
+<div class="text-center pt-3"><h2>Pet Details</h2>
+
+
+<div *ngIf="pet">
+
+ <h3>{{ pet.name }}</h3>
+ <img src="assets/IMG/{{ pet.img }}" alt="pet" width="20%" height="auto" class="mt-3">
+ <h4>{{ pet.price | currency }}</h4>
+
+ <p>{{ pet.description }}</p>
+
+ <button (click)="addToCart(pet)" class="mb-3">Get a pet</button>
+</div></div>
